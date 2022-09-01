@@ -15,13 +15,13 @@ String command;
 
 void setup() {
   // initialize i2c as slave
-  Wire.begin(I2C_SLAVE,SDA_PIN, SCL_PIN,115200 );
+  Wire.begin(I2C_SLAVE,SDA_PIN, SCL_PIN,115200);
    pinMode(ledPin, OUTPUT);
   digitalWrite(ledPin, LOW);
   // define callbacks for i2c communication
   Wire.onReceive(receiveEvent);
 
-  Serial.begin(9600);
+  Serial.begin(115200);
   Serial.println("Ready!");
 
 }
